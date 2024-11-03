@@ -7,8 +7,11 @@ import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import googlePng from "../../../public/google.png"
 import Image from 'next/image'
+import manageStore from '@/lib/store/store'
 
 const AuthPage = ({ type }) => {
+
+    const { signUpAction } = manageStore()
 
     const [fullname, setFullname] = useState("")
     const [username, setUsername] = useState("")
@@ -16,12 +19,20 @@ const AuthPage = ({ type }) => {
     const [passwordShow, setPasswordShow] = useState(false);
     const [password, setPassword] = useState("")
 
+    const handleSubmit = (e) => {
+        e.preventDefault()
+
+        if (type === "signup") {
+            signUpAction(fullname, username, email, password)
+        }
+    }
+
     return (
         <div className=' px-2 py-10 flex flex-col items-center rounded-3xl w-full max-w-[400px] border border-input'>
             <div className='mb-4'>
                 {InstaLogoText}
             </div>
-            <form className='w-[90%] max-w-[95%]'>
+            <form onSubmit={handleSubmit} className='w-[90%] max-w-[95%]'>
                 {
                     type === "signup" && (
                         <>

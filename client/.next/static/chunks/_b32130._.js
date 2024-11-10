@@ -238,13 +238,16 @@ __turbopack_esm__({
     "default": (()=>__TURBOPACK__default__export__)
 });
 var __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$store$2f$userSlice$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/lib/store/userSlice.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$store$2f$notificationSlice$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/lib/store/notificationSlice.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zustand$2f$esm$2f$react$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/zustand/esm/react.mjs [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zustand$2f$esm$2f$middleware$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/zustand/esm/middleware.mjs [app-client] (ecmascript)");
 ;
 ;
 ;
+;
 const manageStore = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zustand$2f$esm$2f$react$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["create"])((0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zustand$2f$esm$2f$middleware$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["persist"])((set, get)=>({
-        ...(0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$store$2f$userSlice$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["userSlice"])(set, get)
+        ...(0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$store$2f$userSlice$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["userSlice"])(set, get),
+        ...(0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$store$2f$notificationSlice$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["notificationSlice"])(set, get)
     }), {
     name: "app-storage"
 }));

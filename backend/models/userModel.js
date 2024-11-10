@@ -94,6 +94,17 @@ userSchema.pre("save", async function (next) {
         user.personal_info.password = await bcrypt.hash(user.personal_info.password, salt);
     }
 
+    if (user.isModified("otp.code") && user.otp.code) {
+        const salt = await bcrypt.genSalt(10);
+        user.otp.code = await bcrypt.hash(user.otp.code, salt);
+    }
+
+    if (this.isVerified) {
+        this.deleteUser = null;
+    } else if (!this.deleteUser) {
+        this.deleteUser = new Date(Date.now() + 10 * 60 * 1000); // Set expiration to 10 minutes from now
+    }
+
     next();
 });
 

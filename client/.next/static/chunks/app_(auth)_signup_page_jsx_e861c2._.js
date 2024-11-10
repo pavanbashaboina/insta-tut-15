@@ -6,7 +6,7 @@
   "path": "static/chunks/app_(auth)_signup_page_jsx_e861c2._.js",
   "chunks": [
     "static/chunks/node_modules_fe5624._.js",
-    "static/chunks/_b32130._.js"
+    "static/chunks/_7aab0b._.js"
   ],
   "source": "dynamic"
 });

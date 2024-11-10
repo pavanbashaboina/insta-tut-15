@@ -1,0 +1,56 @@
+{
+  "sorted_middleware": [],
+  "middleware": {
+    "/": {
+      "files": [
+        "server/edge/chunks/_b99641._.js",
+        "server/edge/chunks/[root of the server]__bfe987._.js",
+        "server/edge/chunks/edge-wrapper_2b1fd1.js"
+      ],
+      "name": "middleware",
+      "page": "/",
+      "matchers": [
+        {
+          "regexp": "/:nextData(_next/data/[^/]{1,})?/((?!api|_next|static|favicon.ico).*)(.json)?",
+          "originalSource": "/((?!api|_next|static|favicon.ico).*)"
+        }
+      ],
+      "wasm": [],
+      "assets": [
+        {
+          "name": "server/edge/chunks/_b99641._.js.map",
+          "filePath": "server/edge/chunks/_b99641._.js.map"
+        },
+        {
+          "name": "server/edge/chunks/_b99641._.js",
+          "filePath": "server/edge/chunks/_b99641._.js"
+        },
+        {
+          "name": "server/edge/chunks/[root of the server]__bfe987._.js.map",
+          "filePath": "server/edge/chunks/[root of the server]__bfe987._.js.map"
+        },
+        {
+          "name": "server/edge/chunks/[root of the server]__bfe987._.js",
+          "filePath": "server/edge/chunks/[root of the server]__bfe987._.js"
+        },
+        {
+          "name": "server/edge/chunks/edge-wrapper_2b1fd1.js.map",
+          "filePath": "server/edge/chunks/edge-wrapper_2b1fd1.js.map"
+        },
+        {
+          "name": "server/edge/chunks/edge-wrapper_2b1fd1.js",
+          "filePath": "server/edge/chunks/edge-wrapper_2b1fd1.js"
+        }
+      ],
+      "env": {
+        "__NEXT_BUILD_ID": "development",
+        "NEXT_SERVER_ACTIONS_ENCRYPTION_KEY": "jko8lYVaBUIfJKcohr17jsPe8EWTFZH7Ut/P1MzbVJM=",
+        "__NEXT_PREVIEW_MODE_ID": "a7c6de63802e962665cfb6231a0fd4fe",
+        "__NEXT_PREVIEW_MODE_ENCRYPTION_KEY": "5f8b6229714992f23730fc8ad3070980c6f40e3d3609eeb4f02343d61d64e7c6",
+        "__NEXT_PREVIEW_MODE_SIGNING_KEY": "84dd3a53db2fe469e10b2cd9a429308c0e95bd046f56406eed70b95ace86e9eb"
+      }
+    }
+  },
+  "instrumentation": null,
+  "functions": {}
+}

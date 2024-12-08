@@ -1,8 +1,10 @@
 import ToastManager from "@/lib/utils/ToastManager";
 import "./globals.css";
-import {Inter} from "next/font/google"
+import { Inter } from "next/font/google"
+import ClientWrapper from "@/components/custom/Home/ClientWrapper";
+import { ThemeProvider } from "@/components/themes/ThemeProvider";
 
-const inter=Inter({subsets:["latin"]})
+const inter = Inter({ subsets: ["latin"] })
 
 export const metadata = {
   title: "Create Next App",
@@ -15,8 +17,17 @@ export default function RootLayout({ children }) {
       <body
         className={inter.className}
       >
-        <ToastManager/>
-        {children}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <ToastManager />
+          <ClientWrapper>
+            {children}
+          </ClientWrapper>
+        </ThemeProvider>
       </body>
     </html>
   );

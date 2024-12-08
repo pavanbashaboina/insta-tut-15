@@ -578,7 +578,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navi
 ;
 ;
 const AuthPage = ({ type })=>{
-    const { signUpAction, signedUser, loading, isAuthenticated, loginAction } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$store$2f$store$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"])();
+    const { signUpAction, signedUser, loading, isAuthenticated, loginAction, googleSignUP } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$store$2f$store$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"])();
     const [fullname, setFullname] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])("");
     const [username, setUsername] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])("");
     const [email, setEmail] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])("");
@@ -594,6 +594,9 @@ const AuthPage = ({ type })=>{
         } else {
             loginAction(email, password);
         }
+    };
+    const handleGoogleSignup = ()=>{
+        googleSignUP();
     };
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
         if (signedUser) {
@@ -616,14 +619,14 @@ const AuthPage = ({ type })=>{
                 children: __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$utils$2f$helper$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["InstaLogoText"]
             }, void 0, false, {
                 fileName: "[project]/components/custom/auth/AuthPage.jsx",
-                lineNumber: 54,
+                lineNumber: 58,
                 columnNumber: 13
             }, this),
             type === "signup" && otpState ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$custom$2f$auth$2f$AuthOtp$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                 type: "signup"
             }, void 0, false, {
                 fileName: "[project]/components/custom/auth/AuthPage.jsx",
-                lineNumber: 59,
+                lineNumber: 63,
                 columnNumber: 21
             }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
                 onSubmit: handleSubmit,
@@ -638,7 +641,7 @@ const AuthPage = ({ type })=>{
                                 onChange: (e)=>setUsername(e.target.value)
                             }, void 0, false, {
                                 fileName: "[project]/components/custom/auth/AuthPage.jsx",
-                                lineNumber: 65,
+                                lineNumber: 69,
                                 columnNumber: 41
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$input$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Input"], {
@@ -648,7 +651,7 @@ const AuthPage = ({ type })=>{
                                 onChange: (e)=>setFullname(e.target.value)
                             }, void 0, false, {
                                 fileName: "[project]/components/custom/auth/AuthPage.jsx",
-                                lineNumber: 66,
+                                lineNumber: 70,
                                 columnNumber: 41
                             }, this)
                         ]
@@ -660,7 +663,7 @@ const AuthPage = ({ type })=>{
                         onChange: (e)=>setEmail(e.target.value)
                     }, void 0, false, {
                         fileName: "[project]/components/custom/auth/AuthPage.jsx",
-                        lineNumber: 70,
+                        lineNumber: 74,
                         columnNumber: 29
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -673,7 +676,7 @@ const AuthPage = ({ type })=>{
                                 type: passwordShow ? "text" : "password"
                             }, void 0, false, {
                                 fileName: "[project]/components/custom/auth/AuthPage.jsx",
-                                lineNumber: 72,
+                                lineNumber: 76,
                                 columnNumber: 33
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("i", {
@@ -681,13 +684,13 @@ const AuthPage = ({ type })=>{
                                 onClick: ()=>setPasswordShow(!passwordShow)
                             }, void 0, false, {
                                 fileName: "[project]/components/custom/auth/AuthPage.jsx",
-                                lineNumber: 73,
+                                lineNumber: 77,
                                 columnNumber: 33
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/custom/auth/AuthPage.jsx",
-                        lineNumber: 71,
+                        lineNumber: 75,
                         columnNumber: 29
                     }, this),
                     type === "signin" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -696,7 +699,7 @@ const AuthPage = ({ type })=>{
                         children: "Forgot Password"
                     }, void 0, false, {
                         fileName: "[project]/components/custom/auth/AuthPage.jsx",
-                        lineNumber: 76,
+                        lineNumber: 80,
                         columnNumber: 33
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
@@ -704,12 +707,12 @@ const AuthPage = ({ type })=>{
                         className: "w-full my-5 duration-300 font-semibold bg-blueInstaLight-0 hover:bg-blueInstaLight-0",
                         children: loading ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$utils$2f$LoadSpinner$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                             fileName: "[project]/components/custom/auth/AuthPage.jsx",
-                            lineNumber: 81,
+                            lineNumber: 85,
                             columnNumber: 41
                         }, this) : type === "signup" ? "Sign up" : "Sign in"
                     }, void 0, false, {
                         fileName: "[project]/components/custom/auth/AuthPage.jsx",
-                        lineNumber: 78,
+                        lineNumber: 82,
                         columnNumber: 29
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -719,7 +722,7 @@ const AuthPage = ({ type })=>{
                                 className: "w-1/2 border-input"
                             }, void 0, false, {
                                 fileName: "[project]/components/custom/auth/AuthPage.jsx",
-                                lineNumber: 87,
+                                lineNumber: 91,
                                 columnNumber: 33
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -727,23 +730,24 @@ const AuthPage = ({ type })=>{
                                 children: "OR"
                             }, void 0, false, {
                                 fileName: "[project]/components/custom/auth/AuthPage.jsx",
-                                lineNumber: 88,
+                                lineNumber: 92,
                                 columnNumber: 33
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("hr", {
                                 className: "border-input w-1/2"
                             }, void 0, false, {
                                 fileName: "[project]/components/custom/auth/AuthPage.jsx",
-                                lineNumber: 89,
+                                lineNumber: 93,
                                 columnNumber: 33
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/custom/auth/AuthPage.jsx",
-                        lineNumber: 86,
+                        lineNumber: 90,
                         columnNumber: 29
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                        onClick: handleGoogleSignup,
                         className: "w-full border border-input rounded-full py-2 cursor-pointer flex items-center justify-center gap-1 my-5",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -752,14 +756,14 @@ const AuthPage = ({ type })=>{
                                 className: "w-5 mr-2"
                             }, void 0, false, {
                                 fileName: "[project]/components/custom/auth/AuthPage.jsx",
-                                lineNumber: 92,
+                                lineNumber: 96,
                                 columnNumber: 33
                             }, this),
                             "Sign in with Google"
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/custom/auth/AuthPage.jsx",
-                        lineNumber: 91,
+                        lineNumber: 95,
                         columnNumber: 29
                     }, this),
                     type === "signup" ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -772,13 +776,13 @@ const AuthPage = ({ type })=>{
                                 children: "Sign in"
                             }, void 0, false, {
                                 fileName: "[project]/components/custom/auth/AuthPage.jsx",
-                                lineNumber: 96,
+                                lineNumber: 100,
                                 columnNumber: 85
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/custom/auth/AuthPage.jsx",
-                        lineNumber: 96,
+                        lineNumber: 100,
                         columnNumber: 33
                     }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                         className: "text-[15px]",
@@ -790,25 +794,25 @@ const AuthPage = ({ type })=>{
                                 children: "Sign up"
                             }, void 0, false, {
                                 fileName: "[project]/components/custom/auth/AuthPage.jsx",
-                                lineNumber: 98,
+                                lineNumber: 102,
                                 columnNumber: 83
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/custom/auth/AuthPage.jsx",
-                        lineNumber: 98,
+                        lineNumber: 102,
                         columnNumber: 33
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/custom/auth/AuthPage.jsx",
-                lineNumber: 61,
+                lineNumber: 65,
                 columnNumber: 25
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/custom/auth/AuthPage.jsx",
-        lineNumber: 53,
+        lineNumber: 57,
         columnNumber: 9
     }, this);
 };
